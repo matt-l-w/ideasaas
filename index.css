@@ -3,6 +3,10 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  
   background-color: #FCDE00;
   
   font-family: sans-serif;
@@ -60,4 +64,16 @@ main {
 #new:hover::before {
   transform: scaleY(1);
   background-color: hsla(194, 100%, 19%, 0.75);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer img {
+  height: 32px;
+  margin: 8px;
 }
