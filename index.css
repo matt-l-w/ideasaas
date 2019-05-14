@@ -1,12 +1,10 @@
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr;
-  
+  overflow-x: hidden;
   background-color: #FCDE00;
   
   font-family: sans-serif;
@@ -22,6 +20,7 @@ main {
 }
 
 #idea {
+  margin-top: 10vh;
   font-size: 2.75rem;
   text-align: center;
 }
@@ -66,7 +65,71 @@ main {
   background-color: hsla(194, 100%, 19%, 0.75);
 }
 
+#pitch-container {
+	display: flex;
+	flex-direction: column;
+	margin: 48px;
+}
+
+#pitch-container label {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 0.75em;
+}
+
+#pitch {
+	font-size: 1.16em;
+	letter-spacing: 0.03em;
+	padding: 8px;
+	border: 0;
+	background-color: rgba(255,255,255,0.95);
+}
+
+#pitch-save {
+	align-self: flex-end;
+}
+
+#past-pitches {
+  min-width: 300px;
+  max-width: 40vw;
+}
+
+#past-pitches h2 {
+	font-size: 1.3em;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+#past-pitches ul {
+	padding: 0;
+	list-style: none;
+}
+
+#past-pitches li {
+  margin: 32px 0;
+  font-size: 0.8em;
+}
+
+#past-pitches li strong {
+  display: block;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+#past-pitches li::after {
+	content: '';
+	width: 80%;
+	height: 1px;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 32px auto;
+}
+
 footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -75,5 +138,5 @@ footer {
 
 footer img {
   height: 32px;
-  margin: 8px;
+  padding: 8px;
 }
