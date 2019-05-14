@@ -31,6 +31,7 @@ main {
 
 #new {
   margin-top: 72px;
+  padding: 0.5em;
   position: relative;
   z-index: 1;
   color: hsl(194, 100%, 10%);
@@ -47,13 +48,12 @@ main {
   right: -0.25em;
   background-color: #004B62;
   transform-origin: bottom center;
-  transform: scaleY(0.1);
+  transform: scaleY(0.1) scaleX(0.9);
   transition: all 0.1s ease-in-out;
 }
 
 #new:hover {
   color: #FAFAFA;
-  padding: 0.5em;
   transition: all 0.1s ease-in-out;
 }
 
