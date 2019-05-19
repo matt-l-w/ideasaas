@@ -34,35 +34,6 @@ main {
 
 #new {
   margin-top: 72px;
-  padding: 0.5em;
-  position: relative;
-  z-index: 1;
-  color: hsl(194, 100%, 10%);
-  text-decoration: none;
-}
-
-#new::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: -0.25em;
-  right: -0.25em;
-  background-color: #004B62;
-  transform-origin: bottom center;
-  transform: scaleY(0.1) scaleX(0.9);
-  transition: all 0.1s ease-in-out;
-}
-
-#new:hover {
-  color: #FAFAFA;
-  transition: all 0.1s ease-in-out;
-}
-
-#new:hover::before {
-  transform: scaleY(1);
-  background-color: hsla(194, 100%, 19%, 0.75);
 }
 
 #pitch-container {
@@ -78,7 +49,8 @@ main {
 }
 
 #pitch {
-	font-size: 1.16em;
+  font-family: sans-serif;
+	font-size: 0.75em;
 	letter-spacing: 0.03em;
 	padding: 8px;
 	border: 0;
@@ -86,7 +58,10 @@ main {
 }
 
 #pitch-save {
-	align-self: flex-end;
+  align-self: flex-end;
+  border: 0;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 #past-pitches {
@@ -139,4 +114,36 @@ footer {
 footer img {
   height: 32px;
   padding: 8px;
+}
+
+.animate-button {
+  padding: 0.5em;
+  position: relative;
+  z-index: 1;
+  color: hsl(194, 100%, 10%);
+  text-decoration: none;
+}
+
+.animate-button::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  background-color: #004B62;
+  transform-origin: bottom center;
+  transform: scaleY(0.1) scaleX(0.9);
+  transition: all 0.1s ease-in-out;
+}
+
+.animate-button:hover {
+  color: #FAFAFA;
+  transition: all 0.1s ease-in-out;
+}
+
+.animate-button:hover::before {
+  transform: scaleY(1);
+  background-color: hsla(194, 100%, 19%, 0.75);
 }
